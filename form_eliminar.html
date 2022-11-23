@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+</head>
+
+	<!-- Inicio del encabezado -->
+	
+	
+<header>
+	<nav>
+		
+		<!-- Encabezado para menú responsivo-->
+		
+         <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+           </label>
+		
+		<!-- Logo-->
+		
+          <a href="index.html" class="enlace">
+            <img src="img/logo.png" alt="Sistema de Bibliotecas" class="logo">
+		 </a>               
+		
+		<!--Menú-->
+		
+		<ul>
+          <li><a href="index.html">Inicio</a></li>
+        <li><a class="active" href="#">Usuarios</a></li>
+        <li><a href="Prestamos.html">Prestamos</a></li>
+		<li><a href="login.html">Salir</a></li>  
+      </ul>
+	</nav>
+    
+</header>	
+	
+	<!-- Inicio del cuerpo -->
+	
+ <body class="login-img-body"> <!-- Imagen de fondo-->	
+	 
+	 <!-- Imagen de Formulario-->	
+	
+	<div class="container">
+		<form class="formulario_1">
+			<div id="header">
+			<ul class="nav1">
+				<li><a href="form_registro.html">Registrar</a></li>
+				<li><a href="form_consultar.html">Consultar</a></li>
+				<li><a href="form_modificar.html">Modificar</a></li>
+				<li><a class="active" href="form_eliminar.html">Eliminar</a></li>
+			</ul>
+		</div>
+		  <p class="elementos_formulario">&nbsp;</p>
+		  <h3 class="elementos_formulario">Colegio San Ignacio</h3>
+			<p class="elementos_formulario"><label>Nº id </label><input type="number"> 
+		    <input type="button" name="button" id="button" value="Consultar">
+			</p>	
+		  <p class="elementos_formulario">
+		    <label>Nombres</label>
+		    <input name="Nombre" type="text" required="required" id="Nombre" placeholder="Nombres" title="Nombres" size="60%" maxlength="40">
+	      </p>
+			<p class="elementos_formulario">
+			  <label>Apellidos</label> 
+			  <input name="Apellidos" type="text" required="required" id="Apellidos" placeholder="Apellidos" title="Apellidos" size="60px" maxlength="40">
+		  	</p>
+			<p class="elementos_formulario">
+			  <label>Grado</label>
+			  <select>
+			    <option>Quinder</option>
+			    <option>Transición</option>
+			    <option>Primero</option>
+			    <option>Segundo</option>
+			    <option>Tercero</option>
+			    <option>Cuarto</option>
+			    <option>Quinto</option>
+		      </select>
+			  <label>Rol</label>
+			  <select>
+			    <option>Administrador</option>
+			    <option>Profesor</option>
+			    <option>Estudiante</option>
+		      </select>
+		  </p>
+			
+			<p class="elementos_formulario">
+			  <input class="btn-register" type="submit" name="submit" id="submit" value="Eliminar">
+				
+			</p>
+      </form>
+	</div>
+</body>
+
+	<!-- Inicio del pie de página -->
+
+<footer>
+	<div class="flex-container">
+ 		<div class="flex-item"><a href="#">Proyecto ADSI - SENA</a></div>
+		<div class="flex-item">Sistemas M.F. &copy; 2022 Todos los derechos reservados</div>
+  		<div class="flex-item">
+				<a href="#"><img src="img/facebook.png" width="40" height="40" alt="facebook"></a>
+				<a href="#"><img src="img/youtube.png" width="40" height="40" alt="youtube"></a>
+				<a href="#"><img src="img/linkedin.png" width="40" height="40" alt="linkedin"></a>
+				<a href="#"><img src="img/wapp.png" width="40" height="40" alt="whatsapp"></a>
+		</div>
+	</div>
+</footer>
+</html>

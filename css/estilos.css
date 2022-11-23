@@ -1,0 +1,473 @@
+/* Fuentes e iconos*/
+
+@charset "utf-8";
+
+@font-face {
+	font-family: 'ElegantIcons';
+	src:url('../fonts/ElegantIcons.eot');
+	src:url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ElegantIcons.woff') format('woff'),
+		url('../fonts/ElegantIcons.ttf') format('truetype'),
+		url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Alto de la pagina en la pantalla */
+
+html{
+    height: 100%;
+}
+
+/* Clases para cuerpo */
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Encabezado */
+
+header{
+     flex: 0 0 auto;
+}
+
+.main-content{
+      flex: 1 0 auto;
+}
+
+/* General */
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+
+/* Menú de navegación */
+
+nav{
+    background: #8b9199; /* gris fondo menú */
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff; /* Color blanco para texto de menú principal */
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #ffc000; /* fondo amarillo para elemento de menú con mouse sobre */
+    transition: .5s;
+	color: #000000; /* negro para color fuente elemento de menú con mouse sobre */
+}
+
+/* boton menú colapsable para dispositivos móviles */
+
+.checkbtn{ 
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+.mainmenubtn {
+    background-color: skyblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.mainmenubtn:hover {
+    background-color: blue;
+    }
+
+	/* Estilos para menú secundario */
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav1 {
+				width: 800px; /*Le establecemos un ancho*/
+				margin:0 auto; /*Centramos automaticamente*/
+			}
+
+			.nav1 > li {
+				float:left;
+			}
+			
+			.nav1 li a {
+				background-color:#ffc000;
+				color:#000;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav1 li a:hover {
+				background-color:rgba(220,220,220,0.98);
+			}
+			.nav1 li a.active {
+				background-color:rgba(220,220,220,0.98);
+			}
+			
+			.nav1 li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav1 li:hover > ul {
+				display:block;
+			}
+			
+			.nav1 li ul li {
+				position:relative;
+			}
+			
+			.nav1 li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+
+/* Iconos */
+
+.icon_contacts{
+	font-family: 'ElegantIcons';
+	color: #374953;
+	speak: none;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon_contacts:before {
+	content: "\e087"; /* icono libreta direccione */
+}
+
+.icon_profile, .icon_key_alt{
+	font-family: 'ElegantIcons';
+	color: #374953; /* color verde para iconos de formulario login */
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon_profile:before {
+	content: "\e08a"; /* icono muñequito usuario login */
+}
+
+.icon_key_alt:before {
+	content: "\e001"; /* icono llave login */
+}
+
+/* Página de login */
+
+.login-body {
+    background-color: #f1f2f7; /* color de fondo del formulario login */
+}
+
+.login-img-body{
+	background: url('../img/bg-1.jpg') no-repeat center center fixed; /* imagen fija en el fondo del cuerpo de la app */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* formulario para login */
+
+.formulario_login {
+    max-width: 350px;
+    margin: 200px auto 0;
+    background: #FFF;
+}
+
+
+.login-img-body .formulario_login{
+    max-width: 350px;
+    margin: 100px auto 0;
+    background: rgba(220,220,220,0.98);
+    border: 1px solid #B0B6BE;
+}
+
+.formulario_login a{
+    color: #688a7e !important;
+}
+
+.formulario_login h2.formulario_login-heading {
+    margin: 0;
+    padding:20px 15px;
+    text-align: center;
+    background: #7091a4;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+
+.formulario_login .checkbox {
+	margin-bottom: 14px;
+    font-weight: normal;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+
+.formulario_login .form-control {
+    position: relative;
+    font-size: 16px;
+	width: 250px;
+    height: auto;
+	margin: 0px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.formulario_login .form-control:focus {
+    z-index: 2;
+}
+
+.formulario_login .login-img{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.formulario_login .grupo_entrada{
+    padding-bottom: 15px;
+}
+
+.formulario_login .elementos_entrada{
+    padding: 6px 12px;
+    font-size: 20px;
+    color: #8b9199;
+    font-weight: normal;
+    line-height: 1;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+}
+
+.formulario_login input[type="text"], .formulario_login input[type="password"] {
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.formulario_login .btn{
+    border-radius: 0;
+}
+
+.btn-login {
+    background-color: #374953; /* Azul Oscuro*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btn-login:hover {
+    background-color: #ffc000; /* Amarillo quemado*/
+    color: white;
+}
+
+.formulario_login p {
+    text-align: center;
+    color: #b6b6b6;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.btn-register {
+    background-color: #374953; /* Azul Oscuro*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+	float: right;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btn-register:hover {
+    background-color: #ffc000; /* Amarillo quemado*/
+    color: white;
+}
+
+.formulario_login a {
+    color: #b6b6b6;
+}
+
+.formulario_login a:hover {
+    color: #34aadc;
+}
+
+.form .required{
+    font-size: 16px;
+    color: #fff;
+}
+
+.login-wrap {
+    padding: 20px;
+}
+
+/* formulario menú secundario */
+
+.formulario_1{
+	max-width: 600px;
+	height: 90%;
+    margin: 100px auto 0;
+    background: rgba(220,220,220,0.98);
+    border: 1px solid #B0B6BE;
+}
+.titulo_formulario{
+	max-width: 100%;
+	text-align: center;
+    padding: 5px;
+	color: #000000;
+    background: #ffc000;
+    border: 1px solid #B0B6BE;
+}
+
+.elementos_formulario{
+    padding: 20px 10px 10px 20px ;
+	font-size: 20px;
+    color: #8b9199;
+	line-height: 1,5;
+	text-align: left;
+    border: none;
+    border-radius: 0;
+}
+
+/* Alinear elemento a la derecha */
+
+.pull-right {
+  float: right !important;
+}
+
+/*Pie de página*/
+
+footer{
+	flex: 0 0 auto;
+	position: absolute;
+	bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: lightgrey;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+	justify-content: center;
+    width: 100%;
+    height: 80px;
+}
+
+.flex-item {
+    width: 90%;
+	justify-content: center;
+    height: 100%;
+    margin: 1% 2% 1% 10%;
+}

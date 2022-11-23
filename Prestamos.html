@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+</head>
+
+	<!-- Inicio del encabezado -->
+	
+	
+<header>
+	<nav>
+		
+		<!-- Encabezado para menú responsivo-->
+		
+         <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+           </label>
+		
+		<!-- Logo-->
+		
+          <a href="index.html" class="enlace">
+            <img src="img/logo.png" alt="Sistema de Bibliotecas" class="logo">
+		 </a>                
+		
+		<!--Menú-->
+		
+		<ul>
+          <li><a href="index.html">Inicio</a></li>
+        <li><a href="form_registro.html">Usuarios</a></li>
+        <li><a class="active" href="#">Prestamos</a></li>
+		<li><a href="login.html">Salir</a></li>  
+      </ul>
+	</nav>
+    
+</header>	
+	
+	<!-- Inicio del cuerpo -->
+	
+ <body class="login-img-body"> <!-- Imagen de fondo-->	
+	 
+	 <!-- Imagen de Formulario-->	
+	
+	<div class="container">
+		<form class="formulario_1">
+			<div id="header">
+			<h2 class="titulo_formulario">Prestamos y Reservas</h2>
+		</div>
+		  <p class="elementos_formulario">Colegio San Ignacio</p>
+		  <p class="elementos_formulario">
+			  <label>Tipo de Elemento</label>
+			  <select>
+			    <option>Libros</option>
+			    <option>Material Educativo</option>
+			    <option>Salas</option>
+			    <option>Medios Tecnológicos</option>
+		      </select>
+		  </p>
+			<p class="elementos_formulario">
+			  <select>
+			    <option>Titulo</option>
+			    <option>Género</option>
+			    <option>Autor</option>
+				<option>Otro</option>
+				
+		      </select>
+			  <label for="search">Búsqueda:</label>
+              <input name="search" type="search" id="search" size="45%">
+              <input type="submit" name="submit2" id="submit2" value="Buscar">
+		  </p>
+			<table width="600" border="1">
+			  <tbody>
+			    <tr>
+			      <td width="111">&nbsp;</td>
+			      <td width="111">&nbsp;</td>
+			      <td width="111">&nbsp;</td>
+			      <td width="111">&nbsp;</td>
+			      <td width="125">&nbsp;</td>
+		        </tr>
+			    <tr>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+			      <td>&nbsp;</td>
+		        </tr>
+		      </tbody>
+		  </table>
+			<p class="elementos_formulario">
+			  <label for="date">Fecha para la solicitud:</label>
+              <input type="date" name="date" id="date">
+			</p>
+			<p class="elementos_formulario">
+			  <label for="time">Hora para la solicitud:</label>
+              <input type="time" name="time" id="time">
+			</p>
+			
+			<p class="elementos_formulario">
+				
+			  <input class="btn-register" type="submit" name="submit" id="submit" value="Reservar">
+				
+		  </p>
+      </form>
+	</div>
+</body>
+
+	<!-- Inicio del pie de página -->
+
+<footer>
+	<div class="flex-container">
+ 		<div class="flex-item"><a href="#">Proyecto ADSI - SENA</a></div>
+		<div class="flex-item">Sistemas M.F. &copy; 2022 Todos los derechos reservados</div>
+  		<div class="flex-item">
+				<a href="#"><img src="img/facebook.png" width="40" height="40" alt="facebook"></a>
+				<a href="#"><img src="img/youtube.png" width="40" height="40" alt="youtube"></a>
+				<a href="#"><img src="img/linkedin.png" width="40" height="40" alt="linkedin"></a>
+				<a href="#"><img src="img/wapp.png" width="40" height="40" alt="whatsapp"></a>
+		</div>
+	</div>
+</footer>
+</html>

@@ -40,6 +40,16 @@
 	<!-- Inicio del cuerpo -->
 	
  <body class="login-img-body"> <!-- Imagen de fondo-->	
+ <!--prueba código php - código de conexión-->
+ <?php 
+    include("conexion.php");
+    //select * from usuarios
+    //variable para almacenar sintaxis bd
+    $sql="select * from usuarios";
+    //variable para enviar parámetros de cx y query
+    $resultado=mysqli_query($conexion,$sql);
+    
+ ?>
 	 
 	 <!-- Imagen de Formulario-->	
 	
@@ -55,40 +65,53 @@
 			</ul>
 		</div>
 		  <p class="elementos_formulario">&nbsp;</p>
-		  <h3 class="elementos_formulario">Colegio San Ignacio</h3>
-		  <p class="elementos_formulario">
-		    <label>Nombres</label>
-		    <input name="Nombre" type="text" required="required" id="Nombre" placeholder="Nombres" title="Nombres" size="60%" maxlength="40">
-	        <input type="radio" name="radio" id="radio" value="radio">
-            
-		  </p>
-			<p class="elementos_formulario">
-			  <label>Apellidos</label> 
-			  <input name="Apellidos" type="text" required="required" id="Apellidos" placeholder="Apellidos" title="Apellidos" size="60px" maxlength="40">
-		      <input type="radio" name="radio2" id="radio2" value="radio2">
-             </p>
-			<p class="elementos_formulario">
-			  <label>Nº id </label><input type="number">
-			  <input type="radio" name="radio3" id="radio3" value="radio3">
-             </p>	
-		  <p class="elementos_formulario">
-		    <label>Grado</label>
-			  <select>
-			    <option>Quinder</option>
-			    <option>Transición</option>
-			    <option>Primero</option>
-			    <option>Segundo</option>
-			    <option>Tercero</option>
-			    <option>Cuarto</option>
-			    <option>Quinto</option>
-		      </select>
-			  <label>Rol</label>
-			  <select>
-			    <option>Administrador</option>
-			    <option>Profesor</option>
-			    <option>Estudiante</option>
-		      </select>
-	 	  </p>
+		  <h3 class="elementos_formulario">Lista de usuarios</h3>
+          <table>
+            <thead>
+                <tr>
+                    <th>Reg</th>
+                    <th>Tipo Doc</th>
+                    <th>Documento</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Grado</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+					<th>Password</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--código php para traer los datos uno por uno
+                usando función con parámetro resultado-->
+                <?php 
+                    while($filas=mysqli_fetch_assoc($resultado)){
+                ?>
+                <tr>
+                    <td><?php echo $filas['idreg']?></td>
+                    <td><?php echo $filas['tipodoc']?></td>
+                    <td><?php echo $filas['documento']?></td>
+                    <td><?php echo $filas['nombres']?></td>
+                    <td><?php echo $filas['apellidos']?></td>
+                    <td><?php echo $filas['grado']?></td>
+                    <td><?php echo $filas['telefono']?></td>
+                    <td><?php echo $filas['email']?></td>
+					<td><?php echo $filas['rol']?></td>
+                    <td><?php echo $filas['passwd']?></td>
+                    <td>
+                        <?php echo "<a href=''>EDITAR</a>";?>
+                        -
+                        <?php echo "<a href=''>ELIMINAR</a>";?>
+                    </td>
+                </tr>
+                <?php }?>
+            </tbody>
+          </table>
+          <?php 
+            mysqli_close($conexion);
+          ?>
+          
 			<p class="elementos_formulario">
 			  <input class="btn-register" type="submit" name="submit" id="submit" value="Consultar">
 		  </p>
